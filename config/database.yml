@@ -23,7 +23,11 @@ default: &default
 
 development:
   <<: *default
-  database: backend_development
+  database: todo_backend_development
+  host: localhost
+  pool: 5
+  username: budget_planner
+  password: budget_planner
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +61,11 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: backend_test
+  database: todo_backend_test
+  host: localhost
+  pool: 5
+  username: budget_planner
+  password: budget_planner
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
