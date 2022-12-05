@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
     def index
         @category = Category.find(params[:category_id])
-        @tasks = @category.tasks.all
+        @tasks = @category.tasks.all.order('created_at ASC')
         render json:@tasks, status: :ok
     end
 
