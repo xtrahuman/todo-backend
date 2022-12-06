@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
     end
 
     def show
-        @category = Category.find_by(id: params[:id]).order('created_at DESC')
+        @category = Category.find_by(id: params[:id])
         render json:@category, status: :ok
     end
 
